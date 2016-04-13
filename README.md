@@ -25,6 +25,8 @@ heroku buildpacks:set https://github.com/techgaun/heroku-buildpack-mix-tasks.git
 heroku buildpacks:add --index 1 https://github.com/HashNuke/heroku-buildpack-elixir.git
 ```
 
+Note: Right now, [HashNuke/heroku-buildpack-elixir](https://github.com/HashNuke/heroku-buildpack-elixir) does not export paths for subsequent buildpacks so you must use [techgaun/heroku-buildpack-elixir](https://github.com/techgaun/heroku-buildpack-elixir)
+
 ### Configuration
 
 Configure the `MIX_DEPLOY_TASKS` environment variable with the tasks you want to run.
