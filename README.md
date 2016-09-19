@@ -3,7 +3,7 @@
 
 ## Instruction
 
-This buildpack is intended to be used after [heroku buildpack for elixir](https://github.com/HashNuke/heroku-buildpack-elixir) to run arbitrary commands during deployment.
+This buildpack is intended to be used after [heroku buildpack for elixir](https://github.com/HashNuke/heroku-buildpack-elixir) to run arbitrary mix tasks during deployment. This is a perfect buildpack if you're looking to run custom mix tasks as part of your heroku build pipeline.
 
 ### Usage
 
