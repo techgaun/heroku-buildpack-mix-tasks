@@ -10,19 +10,19 @@ This buildpack is intended to be used after [heroku buildpack for elixir](https:
 Make sure your app has heroku-buildpack-elixir configured.
 
 ```shell
-heroku create --buildpack "https://github.com/HashNuke/heroku-buildpack-elixir.git" # for new app
+heroku create --buildpack "https://github.com/techgaun/heroku-buildpack-elixir.git" # for new app
 
-heroku config:set BUILDPACK_URL="https://github.com/HashNuke/heroku-buildpack-elixir.git" # for existing app
+heroku config:set BUILDPACK_URL="https://github.com/techgaun/heroku-buildpack-elixir.git" # for existing app
 ```
 
 Set this buildpack after the heroku-buildpack-elixir.
 
 ```shell
 # Set the buildpack for your Heroku app
-heroku buildpacks:set https://github.com/techgaun/heroku-buildpack-mix-tasks.git
+heroku buildpacks:set https://github.com/techgaun/heroku-buildpack-elixir.git
 
 # Add this buildpack after the Elixir buildpack
-heroku buildpacks:add --index 1 https://github.com/HashNuke/heroku-buildpack-elixir.git
+heroku buildpacks:add --index 1 https://github.com/techgaun/heroku-buildpack-mix-tasks.git
 ```
 
 Note: Right now, [HashNuke/heroku-buildpack-elixir](https://github.com/HashNuke/heroku-buildpack-elixir) does not export paths of previous buildpacks in sequence for subsequent buildpacks so you might need to use [techgaun/heroku-buildpack-elixir](https://github.com/techgaun/heroku-buildpack-elixir) in some cases.
