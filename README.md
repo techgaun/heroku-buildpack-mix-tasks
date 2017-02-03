@@ -38,7 +38,7 @@ heroku config:set MIX_DEPLOY_TASKS='ecto.migrate'
 You can separate tasks with semicolon if you want to run multiple tasks. Note that they will run in a sequential order.
 
 ```shell
-heroku config:set MIX_DEPLOY_TASKS='ecto.drop;ecto.create;ecto.migrate'
+heroku config:set MIX_DEPLOY_TASKS='ecto.drop;ecto.create;ecto.migrate;run priv/repo/my_custom_seeds.exs'
 ```
 
 On a side note, I do not recommend running `ecto.migrate`, db related commands and other various time consuming commands on Production. Esp. running `ecto.migrate` on Production can become a nightmare when you have grown to big database.
