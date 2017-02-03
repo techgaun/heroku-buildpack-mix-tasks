@@ -27,8 +27,7 @@ if [ -z "$MIX_DEPLOY_TASKS" ]; then
 fi
 
 cd $build_dir
-tasks_arr=$(echo "$MIX_DEPLOY_TASKS" | tr ";" "\n")
-for task in $tasks_arr; do
+for task in $(echo "$MIX_DEPLOY_TASKS" | tr ";" "\n"); do
   echo "Executing mix ${task}"
   mix "${task}"
 done
