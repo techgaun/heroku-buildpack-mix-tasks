@@ -28,6 +28,6 @@ fi
 
 cd $build_dir
 for task in $(echo "$MIX_DEPLOY_TASKS" | tr ";" "\n"); do
-  echo "Executing mix ${task}"
+  echo "Executing the task: 'mix ${task}'"
   mix "${task}"
 done
