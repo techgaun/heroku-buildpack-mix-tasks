@@ -30,5 +30,5 @@ cd $build_dir
 IFS=';' read -ra tasks_arr <<< "$MIX_DEPLOY_TASKS"
 for task in "${tasks_arr[@]}"; do
   echo "Executing the task: 'mix ${task}'"
-  mix "${task}"
+  mix $task
 done
